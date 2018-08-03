@@ -20,7 +20,7 @@ export class PhotosListComponent implements OnInit {
   }
 
   getPhotosByAlbum(): void {
-    const albumId = this.route.snapshot.paramMap.get('albumId');
+    const albumId = Number(this.route.snapshot.paramMap.get('albumId'));
     this.photoService.getPhotosByAlbumId(albumId).subscribe(photos => this.photos = photos);
   }
 }
