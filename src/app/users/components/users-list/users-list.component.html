@@ -6,4 +6,8 @@
     <p>{{user.name}}</p>
     <p>{{user.email}}</p>
   </mat-card-content>
+  <mat-card-actions>
+    <button (click)="getPostsByUser(user.id)" mat-raised-button color="primary">Posts</button>
+    <button (click)="getAlbumsByUser(user.id)" mat-raised-button color="primary">Albums</button>
+  </mat-card-actions>
 </mat-card>

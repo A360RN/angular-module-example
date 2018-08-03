@@ -1,3 +1,10 @@
-<p>
-  photos-list works!
-</p>
+<mat-card *ngFor="let photo of photos">
+  <mat-card-header>
+    <img mat-card-avatar src="{{photo.thumbnailUrl}}">
+    <mat-card-title>{{photo.title}}</mat-card-title>
+    <mat-card-subtitle>{{photo.id}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{photo.url}}">
+  <mat-card-content>
+  </mat-card-content>
+</mat-card>

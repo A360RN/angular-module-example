@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
 import { PostsRouterModule } from './posts-router.module';
 import { PostsListComponent } from './components/posts-list/posts-list.component';
 import { CommentsListComponent } from './components/comments-list/comments-list.component';
@@ -7,9 +9,8 @@ import { CommentService } from './services/comment.service';
 
 @NgModule({
   imports: [
-    PostsRouterModule
-  ],
-  exports: [
+    CommonModule,
+    SharedModule,
     PostsRouterModule
   ],
   declarations: [PostsListComponent, CommentsListComponent],

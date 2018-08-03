@@ -5,9 +5,9 @@ import { PostsListComponent } from './components/posts-list/posts-list.componen
 import { CommentsListComponent } from './components/comments-list/comments-list.component';
 
 const routes: Routes = [
-  { path: 'users/:id', children: [
+  { path: 'users/:userId', children: [
     { path: 'posts', component: PostsListComponent},
-    { path: 'posts/:id', children: [
+    { path: 'posts/:postId', children: [
       { path: 'comments', component: CommentsListComponent}
     ]}
   ]}

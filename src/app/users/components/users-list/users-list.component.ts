@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { User } from '../../model/user';
 import { UserService } from '../../services/user.service';
@@ -12,7 +13,7 @@ export class UsersListComponent implements OnInit {
 
   users: User[];
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
     this.getUsers();
@@ -20,5 +21,13 @@ export class UsersListComponent implements OnInit {
 
   getUsers(): void {
     this.userService.getUsers().subscribe(users => this.users = users);
+  }
+
+  getPostsByUser(userId: number): void {
+    this.router.navigate([`/users/${userId}/posts`]);
+  }
+
+  getAlbumsByUser(userId: number): void {
+    this.router.navigate([`/users/${userId}/albums`]);
   }
 }

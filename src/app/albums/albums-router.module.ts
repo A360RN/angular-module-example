@@ -5,9 +5,9 @@ import { AlbumsListComponent } from './components/albums-list/albums-list.compo
 import { PhotosListComponent } from './components/photos-list/photos-list.component';
 
 const routes: Routes = [
-  { path: 'users/:id', children: [
+  { path: 'users/:userId', children: [
     { path: 'albums', component: AlbumsListComponent },
-    { path: 'albums/:id', children: [
+    { path: 'albums/:albumId', children: [
       { path: 'photos', component: PhotosListComponent }
     ]}
   ]}

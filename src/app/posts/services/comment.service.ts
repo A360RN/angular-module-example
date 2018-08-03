@@ -1,7 +1,16 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+import { Comment } from '../model/comment';
 
 @Injectable()
 export class CommentService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  getCommentsByPost(postId: number): Observable<Comment[]> {
+    const url = `https://jsonplaceholder.typicode.com/post/${postId}/comments`;
+    return this.http.get<Comment[]>(url);
+  }
 }
