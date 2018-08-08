@@ -30,4 +30,8 @@ export class UsersListComponent implements OnInit {
   getAlbumsByUser(userId: number): void {
     this.router.navigate([`/users/${userId}/albums`]);
   }
+
+  getTodosByUser(userId: number): void {
+    this.router.navigate([`/users/${userId}/todos`]);
+  }
 }

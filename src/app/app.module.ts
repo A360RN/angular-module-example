@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { UsersModule } from './users/users.module';
 import { PostsModule } from './posts/posts.module';
 import { AlbumsModule } from './albums/albums.module';
+import { TodosModule } from './todos/todos.module';
 
 import { AppComponent } from './app.component';
 
@@ -15,7 +16,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     UsersModule,
     PostsModule,
-    AlbumsModule
+    AlbumsModule,
+    TodosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

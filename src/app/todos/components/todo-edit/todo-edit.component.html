@@ -1,0 +1,11 @@
+<mat-card *ngIf="todo">
+  <mat-card-header>
+    <mat-card-title>{{todo.title}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-checkbox [(ngModel)]="todo.completed">Completed</mat-checkbox>
+    <mat-card-actions>
+      <button (click)="updateTodo()" mat-raised-button color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>
