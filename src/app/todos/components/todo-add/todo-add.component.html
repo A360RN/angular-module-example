@@ -1,3 +1,13 @@
-<p>
-  todo-add works!
-</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Add a todo</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field>
+      <input [(ngModel)]="todoTitle" matInput placeholder="Todo Title">
+    </mat-form-field>
+    <mat-card-actions>
+      <button (click)="addTodo()" mat-raised-button color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

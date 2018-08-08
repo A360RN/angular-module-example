@@ -28,4 +28,8 @@ export class TodosListComponent implements OnInit {
   editTodo(todoId: number): void {
     this.router.navigate([`/users/${this.userId}/todos/${todoId}/edit`]);
   }
+
+  addTodo(): void {
+    this.router.navigate([`/users/${this.userId}/todos/add`]);
+  }
 }

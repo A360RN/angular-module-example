@@ -4,6 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   imports: [
@@ -11,14 +12,16 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatCardModule,
     MatProgressSpinnerModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatInputModule
   ],
   exports: [
     HttpClientModule,
     MatCardModule,
     MatProgressSpinnerModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatInputModule
   ],
   declarations: []
 })
